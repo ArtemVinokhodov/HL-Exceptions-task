@@ -8,7 +8,7 @@ public class DifferentPrices {
     public static int customNumberAfterParse = -1;
 
     public static void main(String[] args) {
-        getData();
+        customNumberAfterParse = getData();
         checkDate(customNumberAfterParse, priceWithinFiveDays);
     }
 

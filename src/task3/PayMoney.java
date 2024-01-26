@@ -14,11 +14,15 @@ public class PayMoney {
 
     public static int getData() {
         Scanner scanner = new Scanner(System.in);
-        //try {
+        try {
             System.out.print("Товар стоит 10 денег. Введите количество нужного товара:");
             int customNumber = scanner.nextInt();
             return totalPrice = checkDate(customNumber, moneyInWallet);
+        } catch (InputMismatchException e) {
+            System.out.println("Не верный формат");
         }
+        return totalPrice;
+    }
 
     public static int checkDate(int customNumber, int moneyInWallet) {
         int sum = customNumber * priceProduct;
